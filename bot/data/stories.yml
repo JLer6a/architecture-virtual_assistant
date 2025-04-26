@@ -1,0 +1,28 @@
+version: "3.1"
+
+stories:
+- story: Приветствие и вопрос об архитектуре
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_architecture
+    - action: utter_architecture_response
+
+- story: Уточнение после вопроса
+  steps:
+    - intent: ask_architecture
+    - action: utter_architecture_response
+    - intent: request_info
+    - action: utter_ask_more
+
+- story: Подтверждение после уточнения
+  steps:
+    - intent: request_info
+    - action: utter_ask_more
+    - intent: affirm
+    - action: utter_acknowledge
+
+- story: Прощание
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye

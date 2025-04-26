@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+- rule: Приветствие
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Прощание
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Вопрос по архитектуре
+  steps:
+    - intent: ask_architecture
+    - action: utter_architecture_response
+
+- rule: Уточнение информации
+  steps:
+    - intent: request_info
+    - action: utter_ask_more
+
+- rule: Подтверждение
+  steps:
+    - intent: affirm
+    - action: utter_acknowledge
+
+- rule: Отказ
+  steps:
+    - intent: deny
+    - action: utter_goodbye

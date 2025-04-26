@@ -1,0 +1,29 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_architecture
+  - affirm
+  - deny
+  - request_info
+
+responses:
+  utter_greet:
+    - text: "Привет! Чем могу помочь в области архитектуры программного обеспечения?"
+
+  utter_goodbye:
+    - text: "До свидания! Если появятся вопросы по архитектуре ПО, обращайтесь."
+
+  utter_architecture_response:
+    - text: "Архитектура ПО включает выбор структур, обеспечивающих масштабируемость, гибкость и поддерживаемость приложений. Задайте конкретный вопрос — я помогу!"
+
+  utter_ask_more:
+    - text: "Что именно вас интересует в архитектуре программного обеспечения?"
+
+  utter_acknowledge:
+    - text: "Понял вас. Можете рассказать подробнее о проекте или задаче?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
